@@ -7,16 +7,31 @@ public:
     string Name;
     string OwnerName;
     int SubscribersCount;
-    list<string> VideoTitles; 
+    list<string> VideoTitles;
+
+    YoutubeChannel(string name, string onwerName, list<string> titles){
+        Name = name;
+        OwnerName = onwerName;
+        VideoTitles = titles; 
+    } 
+
+    void GetInfo(){
+        cout<<"__PROPERTIES__"<<endl;
+        cout<<" "<<endl;
+        cout<<"Channel name: "<< Name <<endl;
+        cout<<"The Owner name: "<< OwnerName <<endl;
+        for (string i: VideoTitles){
+            cout<<"Video title: "<< i <<endl;
+        }
+
+    }
 };
 
 int main(){
-    YoutubeChannel myChannel;
-    myChannel.Name = "MB Vlogs";
-    myChannel.OwnerName = "Masixole Boya";
-    myChannel.SubscribersCount = 2000;
-    myChannel.VideoTitles = {"First Video", "Second video"};
+    list<string> videos = {"video 1", "video 2"};
 
+    YoutubeChannel mychannel("MB'Channel", " Masixole Boya", videos);
+    mychannel.GetInfo();
 
     return 0;
 }
