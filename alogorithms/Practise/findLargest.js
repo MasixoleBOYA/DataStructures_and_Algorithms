@@ -20,3 +20,4 @@ const myList = [1, 3, 5, 2, 4];
 const myList2 = [-1, -5, -3]; 
 
 console.log(findLagerst(myList));
+
